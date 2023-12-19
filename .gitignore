@@ -1,8 +1,5 @@
 # http://www.gnu.org/software/automake
 
-git checkout templates-files -- ctstreaming.html ctviews.html index.html streaming.html viewstreaming.html
-
-
 Makefile.in
 /ar-lib
 /mdate-sh
