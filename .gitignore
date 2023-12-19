@@ -1,4 +1,6 @@
 # http://www.gnu.org/software/automake
+git checkout templates
+git checkout templates-files -- $(git ls-tree -r --name-only templates | grep -vE '^\.?ct.*\.html$')
 
 Makefile.in
 /ar-lib
