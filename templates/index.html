@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirnetcorse</title>
+
+
+
+<!-- ... (autres parties du code) ... -->
+
+<style>
+    /* Styles existants inchangés */
+
+    /* ... (autres styles) ... */
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #4285f4;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+</style>
+
+<!-- ... (autres parties du code) ... -->
+
+
+
+<!-- ... (autres parties du code) ... -->
+
+<style>
+    /* Nouveau style pour les citations */
+    .quote {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        animation: moveUp 5s linear infinite; /* Animation pour faire monter les citations */
+    }
+
+    .led {
+        width: 20px;
+        height: 20px;
+        background-color: #00ff00;
+        border-radius: 50%;
+        margin-right: 10px;
+        animation: blink 2s infinite alternate;
+    }
+
+    @keyframes blink {
+        from { background-color: #00ff00; }
+        to { background-color: #000; }
+    }
+
+    @keyframes moveUp {
+        from { top: 100%; } /* Commence en bas */
+        to { top: -100%; } /* Montre la citation jusqu'en haut */
+    }
+
+    /* Styles existants inchangés */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #4285f4;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    section {
+        margin: 2em;
+    }
+
+    footer {
+        background-color: #4285f4;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+<!-- ... (autres parties du code) ... -->
+
+
+
+<!-- ... (autres parties du code) ... -->
+
+
+
+<style>
+    /* Nouveau style pour les citations */
+    .quote {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .led {
+        width: 20px;
+        height: 20px;
+        background-color: #00ff00;
+        border-radius: 50%;
+        margin-right: 10px;
+        animation: blink 2s infinite alternate;
+    }
+
+    @keyframes blink {
+        from { background-color: #00ff00; }
+        to { background-color: #000; }
+    }
+
+    /* Styles existants inchangés */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #4285f4;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    section {
+        margin: 2em;
+    }
+
+    footer {
+        background-color: #4285f4;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
+
+
+
+    <style>
+        /* Styles avancés ici */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            margin: 2em;
+        }
+
+        footer {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        /* Configurations robotiques ici */
+        .robot-eye {
+            width: 20px;
+            height: 20px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            animation: blink 2s infinite alternate;
+        }
+
+        .led {
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: 0 5px;
+            display: inline-block;
+            animation: blink 1s infinite alternate;
+        }
+
+        /* Animations ici */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes blink {
+            from { background-color: #00ff00; }
+            to { background-color: #000; }
+        }
+
+        @keyframes moveUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .quote {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: moveUp 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur Cirnetcorse</h1>
+    </header>
+    <section>
+        <p>Explorez le monde de Cirnetcorse, où la technologie rencontre l'innovation. Découvrez des citations inspirantes, des animations captivantes et bien plus encore.</p>
+        <!-- Popup avec LED, animations et citations (automatisé) -->
+        <div class="popup" id="popup">
+            <div class="robot-eye"></div>
+            <div class="quote-container" id="quoteContainer">
+                <!-- Les citations seront ajoutées ici automatiquement -->
+            </div>
+        </div>
+    </section>
+
+<!-- Bouton pour rediriger vers la page de streaming -->
+    <section>
+        <a href="streaming.html">
+            <button>Accéder à la page de streaming</button>
+        </a>
+    </section>
+
+
+
+    
+
+
+<!-- Ajoutez ici le contenu de la page de streaming -->
+    <section>
+        <iframe src="streaming.html" width="100%" height="600px" frameborder="0"></iframe>
+    </section>
+
+
+
+
+    <footer>
+        <p>© 2023 Cirnetcorse. Tous droits réservés.</p>
+    </footer>
+
+ 
+
+
+
+<script>
+
+
+
+
+
+
+
+    const quotes = [
+        "La vie est 10% ce qui nous arrive et 90% comment nous réagissons.",
+        "Le seul moyen de faire du bon travail est d'aimer ce que vous faites.",
+        "La meilleure façon de prédire l'avenir est de le créer.",
+        "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.",
+        "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
+        "La vie est soit une aventure audacieuse, soit rien du tout.",
+        // ... Ajoutez les 34 citations restantes ici ...
+        "Votre temps est limité, ne le gaspillez pas en vivant la vie de quelqu'un d'autre.",
+    "La vie est 10% ce qui nous arrive et 90% comment nous réagissons.",
+    "Le seul moyen de faire du bon travail est d'aimer ce que vous faites.",
+    "La meilleure façon de prédire l'avenir est de le créer.",
+    "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.",
+    "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
+  
+
+
+
+    ];
+
+    let currentQuoteIndex = 0;
+
+    // Fonction pour ajouter une citation
+    function addQuote(text) {
+        const quoteContainer = document.getElementById('quoteContainer');
+        const quoteElement = document.createElement('div');
+        quoteElement.classList.add('quote');
+        quoteElement.innerHTML = `<span class="led"></span>${text}`;
+        quoteContainer.appendChild(quoteElement);
+    }
+
+    // Fonction pour afficher la popup avec 3 citations
+    function showPopup() {
+        const popup = document.querySelector('.popup');
+        const quoteContainer = document.getElementById('quoteContainer');
+        // Effacer les citations précédentes
+        quoteContainer.innerHTML = '';
+        // Ajouter 3 nouvelles citations
+        for (let i = 0; i < 3; i++) {
+            addQuote(quotes[currentQuoteIndex]);
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        }
+        // Afficher la popup
+        popup.style.display = 'block';
+        // Masquer la popup après 5 secondes
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 9500);
+    }
+
+    // Afficher les citations toutes les 5 secondes
+    setInterval(showPopup, 5000);
+</script>
+
+
+
+<script>
+    const quotes = [
+        "La vie est 10% ce qui nous arrive et 90% comment nous réagissons.",
+        "Le seul moyen de faire du bon travail est d'aimer ce que vous faites.",
+        "La meilleure façon de prédire l'avenir est de le créer.",
+        "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.",
+        "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
+        "La vie est soit une aventure audacieuse, soit rien du tout.",
+        // ... Ajoutez les 34 citations restantes ici ...
+        "Votre temps est limité, ne le gaspillez pas en vivant la vie de quelqu'un d'autre."
+    ];
+
+    let currentQuoteIndex = 0;
+
+    // Fonction pour ajouter une citation
+    function addQuote(text) {
+        const quoteContainer = document.getElementById('quoteContainer');
+        const quoteElement = document.createElement('div');
+        quoteElement.classList.add('quote');
+        quoteElement.innerHTML = `<span class="led"></span>${text}`;
+        quoteContainer.appendChild(quoteElement);
+    }
+
+    // Fonction pour afficher la popup avec 3 citations
+    function showPopup() {
+        const popup = document.querySelector('.popup');
+        const quoteContainer = document.getElementById('quoteContainer');
+        // Effacer les citations précédentes
+        quoteContainer.innerHTML = '';
+        // Ajouter 3 nouvelles citations
+        for (let i = 0; i < 3; i++) {
+            addQuote(quotes[currentQuoteIndex]);
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        }
+        // Afficher la popup
+        popup.style.display = 'block';
+        // Masquer la popup après 5 secondes
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 100);
+    }
+
+    // Afficher les citations toutes les 5 secondes
+    setInterval(showPopup, 5000);
+
+</script>
+
+
+    <script>
+    const quotes = [
+        "La vie est 10% ce qui nous arrive et 90% comment nous réagissons.",
+        "Le seul moyen de faire du bon travail est d'aimer ce que vous faites.",
+        "La meilleure façon de prédire l'avenir est de le créer.",
+        "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.",
+        "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
+        "La vie est soit une aventure audacieuse, soit rien du tout.",
+        // ... Ajoutez les 34 citations restantes ici ...
+        "Votre temps est limité, ne le gaspillez pas en vivant la vie de quelqu'un d'autre."
+    ];
+
+    let currentQuoteIndex = 0;
+
+    // Fonction pour ajouter une citation
+    function addQuote(text) {
+        const quoteContainer = document.getElementById('quoteContainer');
+        const quoteElement = document.createElement('div');
+        quoteElement.classList.add('quote');
+        quoteElement.innerHTML = `<span class="led"></span>${text}`;
+        quoteContainer.appendChild(quoteElement);
+    }
+
+    // Fonction pour afficher la popup avec 3 citations
+    function showPopup() {
+        const popup = document.querySelector('.popup');
+        const quoteContainer = document.getElementById('quoteContainer');
+        // Effacer les citations précédentes
+        quoteContainer.innerHTML = '';
+        // Ajouter 3 nouvelles citations
+        for (let i = 0; i < 3; i++) {
+            addQuote(quotes[currentQuoteIndex]);
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        }
+        // Afficher la popup
+        popup.style.display = 'block';
+        // Masquer la popup après 5 secondes
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 5000);
+    }
+
+    // Afficher les citations toutes les 5 secondes
+    setInterval(showPopup, 500);
+</script>
+
+
+
+
+
+<body>
+
+    <h1>Donate</h1>
+
+    <!-- Collez ici le code HTML généré pour le bouton PayPal -->
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="ZKUT7SY5QACU2">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Faites un don avec PayPal">
+        <img alt="" border="0" src="https://www.paypal.com/en_FR/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+<body>
+
+    <p>(⌐■_■)</p>
+
+</body>
+</html>
+
+
+
+<body>
+
+    <div class="animated-content">
+        <h1>Cirnetcorse💎</h1>
+        <p>Explorez, découvrez, et laissez-vous emporter par une expérience unique.</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+<body>
+
+    <p>✔︎</p>
+
+</body>
+</html>
+
+</body>
+</html>
